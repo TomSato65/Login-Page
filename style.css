@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:focus {
+    box-shadow: 0 0 0 2px #820ad133;
+    transition: 0.4s;
+}
+
+body, input, button {
+    color: #111111;    
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #4c0677;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.input-container + .input-container {
+    margin-top: 36px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input {
+    width: 100%;
+    height: 40px;
+    padding: 6px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #69578D;
+}
+
+.login-container {
+    max-width: 400px;
+    width: 90%;
+    background-color: #f5f5f5;
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px 6px #2a2424;
+}
+
+.input-container label {
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: text;
+    transition: 0.4s;
+}
+
+.input-container input:focus ~ label, 
+.input-container input:not(:placeholder-shown) ~ label 
+{
+    top: -10px;
+    color: #820ad1;
+}
+
+
+button[type="submit"] {
+    margin-top: 24px;
+    width: 100%;
+    height: 48px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #820ad1;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    filter: brightness(0.8);
+    transition: 0.2s;
+}
+
+.have-account {
+    color: #666666;
+}
+
+.have-account:hover{
+    color: #820ad1;
+    text-decoration: underline;
+}
+
+hr {
+    width: 100%;
+    margin: 32px 0;
+}
+
+.oauth-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.oauth-container button {
+    background-color: #e1e1e6;
+    font-weight: bold;
+    font-size: 14px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 0;
+    transition: 0.2s;
+}
+
+.oauth-container button:hover {
+    background-color: #820ad133;
+}
+
+.oauth-container img {
+    width: 43px;
+    height: 43px;
+}
+.password-visibility {
+    position: absolute;
+    right: 6px;    
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+input[type="password"] {
+    padding-right: 38px;
+}
